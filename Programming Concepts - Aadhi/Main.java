@@ -1,18 +1,19 @@
 import java.util.ArrayList;
-import java.util.Scanner;
-public class main1 {
+
+public class Main {
+    
     
         
     
     public static void main(String[] args)
 {
    System.out.println ("Welcome to Aadhi's Top 10 songs");
-   String aa1 = InputReader.getString("Shall we get started?");
+   String q1 = InputReader.getString("Shall we get started?");
    
 
 
 
-    music patampoochi = new music("patampoochi", "Aadhi", 21162);
+   music patampoochi = new music("patampoochi", "Aadhi", 21162);
    patampoochi.print();
    music sadboi = new music("sad boi ", "Aadhi",10609);
    sadboi.print();
@@ -44,14 +45,9 @@ public class main1 {
    songs.add(thuglove);
    songs.add(ayirathiloruthi);
    songs.add(heated);
-   int songnumber = 0 ;
-        for(music song : songs){
-            System.out.println("No: "+songnumber+"\t");
-            song.print();
-            songnumber++;
-        }
+
 String aa2 = InputReader.getString(" Do you want to add a song to list ? ");
- if (aa2.equalsIgnoreCase("yes") ){
+ if (q1.equalsIgnoreCase("yes") ){
     String songsadd = InputReader.getString(" Please enter the name of the song :");
     String artistadd = InputReader.getString(" Please enter name of the songs artist :");
     int playcountadd = InputReader.getInt(" Please enter playcount of the song");
@@ -66,35 +62,41 @@ String aa2 = InputReader.getString(" Do you want to add a song to list ? ");
     int aa3 =InputReader.getInt(" Do you want to remove song from the list ?( Pick a song number from 0 to 10 to remove) >");
     String aa4 = InputReader.getString("please confirm this removal " + aa3 +"?");
     if (aa4.equalsIgnoreCase("yes")){
+
     songs.remove(aa3);
-    for( music l :songs) {
-        System.out.print("Songnumber: 0");
-        l.print(); 
-    } 
-{
-    try (Scanner choose = new Scanner(System.in)){
-        System.out.println("Enter number of playcounts of songs you're searching ");
-        int playcount = choose.nextInt();
-        for (music music : songs){
-          if (playcount <= music.getPlaycount()){
-              music.print();
-              System.out.println(); }
-          }
+    for (music i: songs) {
+        System.out.print("ID: 0");
+        i.print(); } }
+
+
+    }
 
 
 
-    System.out.println("Thank you for using this service");
+
+    
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
-  }
+
+
+
+
+
+
 }
-
-
-
-
-
-
-
-
-}}}}
